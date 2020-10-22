@@ -26,11 +26,13 @@ int main()
 
     Laboratorio vc;
 
-    vc.agregarComputadora(n01);
-    vc.agregarComputadora(n02);
-    vc.agregarComputadora(n03);
-    vc.agregarComputadora(n04);
-    vc.agregarComputadora(n05);
+    vc << n01 << n02 << n03 << n04 << n05;
+    
+    // vc.agregarComputadora(n01);
+    // vc.agregarComputadora(n02);
+    // vc.agregarComputadora(n03);
+    // vc.agregarComputadora(n04);
+    // vc.agregarComputadora(n05);
 
     vc.mostrar();
 
