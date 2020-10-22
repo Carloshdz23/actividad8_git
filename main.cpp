@@ -21,16 +21,20 @@ int main()
 
     Computadora n04 = Computadora("Computadora de Andrea", "Windows", "16GB", "500GB");
 
+    Computadora n05;
+    cin >> n05;
+
     Laboratorio vc;
 
     vc.agregarComputadora(n01);
     vc.agregarComputadora(n02);
     vc.agregarComputadora(n03);
     vc.agregarComputadora(n04);
+    vc.agregarComputadora(n05);
 
-    // vc.mostrar();
+    vc.mostrar();
 
-    cout << n03;
+    // cout << n04;
 
     return 0;
 }
