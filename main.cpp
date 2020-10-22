@@ -28,7 +28,9 @@ int main()
     vc.agregarComputadora(n03);
     vc.agregarComputadora(n04);
 
-    vc.mostrar();
+    // vc.mostrar();
+
+    cout << n03;
 
     return 0;
 }

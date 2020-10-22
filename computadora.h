@@ -21,6 +21,17 @@ public:
     string getMemoria();
     void setDD(const string &v);
     string getDD();
+
+    friend ostream& operator<<(ostream &out, const Computadora &c)
+    {
+        out << left;
+        out << c.nombredelequipo << endl;
+        out << c.sistemaoperativo << endl;
+        out << c.memoriaram << endl;
+        out << c.discoduro << endl;
+
+        return out;
+    }
 };
 
 #endif
