@@ -75,3 +75,32 @@ void Laboratorio::respaldar()
     }
     archivo.close();
 }
+
+void Laboratorio::recuperar()
+{
+    ifstream archivo("computadoras.txt");
+    if(archivo.is_open())
+    {
+        string temp;
+        Computadora c;
+
+        while(true)
+        {
+            getline(archivo, temp); // Nombre del Equipo
+            if(archivo.eof())
+            {
+                break;
+            }
+            c.setNomEqu(temp);
+            getline(archivo, temp); // Sistema Operativo
+            c.setSistemaO(temp);
+            getline(archivo, temp); // Memoria RAM
+            c.setMemoria(temp);
+            getline(archivo, temp); // Disco Duro
+            c.setDD(temp);
+
+            agregarComputadora(c);
+        }
+    }
+    archivo.close();
+}
