@@ -34,7 +34,5 @@ int main()
 
     vc.mostrar();
 
-    // cout << n04;
-
     return 0;
 }
