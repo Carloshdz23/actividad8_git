@@ -2,6 +2,7 @@
 #define COMPUTADORA_H
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 class Computadora
@@ -21,6 +22,32 @@ public:
     string getMemoria();
     void setDD(const string &v);
     string getDD();
+
+    friend ostream& operator<<(ostream &out, const Computadora &c)
+    {
+        out << left;
+        out << setw(25) << c.nombredelequipo;
+        out << setw(25) << c.sistemaoperativo;
+        out << setw(20) << c.memoriaram;
+        out << setw(15) << c.discoduro;
+        out << endl;
+
+        return out;
+    }
+
+    friend istream& operator>>(istream &in, Computadora &c)
+    {
+        cout << "Nombre del Equipo: ";
+        getline(cin, c.nombredelequipo);
+        cout << "Sistema Operativo: ";
+        getline(cin, c.sistemaoperativo);
+        cout << "Memoria RAM: ";
+        getline(cin, c.memoriaram);
+        cout << "Disco Duro: ";
+        getline(cin, c.discoduro);
+
+        return in;
+    }
 };
 
 #endif
